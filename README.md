@@ -5,27 +5,31 @@ Páginas legales de la app Numidia. HTML estático, sin build.
 Vive fuera del panel admin **a propósito**: el panel no debe ser público, y
 alojar aquí las páginas obligaría a exponer su dominio.
 
-## Antes de publicar
+## Decisiones tomadas
 
-Busca y reemplaza en los tres HTML:
+No quedan marcadores por rellenar. Tres cosas conviene no deshacer sin pensarlo:
 
-| Marcador | Qué poner |
-|----------|-----------|
-| `[DATE]` | Fecha de la última revisión |
-| `[NOM DE L'ÉDITEUR]` | Nombre legal de quien publica la app |
-| `[ADRESSE]` | Domicilio del editor |
-| `[EMAIL DE CONTACT]` | Correo de contacto para asuntos de datos |
-| `[PAYS]` | País cuya ley aplica |
-| `[PRIX]` | Precios reales, **idénticos** a los de Play Console y App Store |
+**Los precios no se escriben aquí.** `terms.html` remite al precio mostrado en
+la app, que es el que hace fe. Las tiendas convierten a la moneda de cada país
+y aplican los impuestos locales, así que una cifra fija en euros solo sería
+cierta en la eurozona — y cualquier ajuste de tarifas dejaría el documento
+desalineado, que es motivo de rechazo en la revisión de Apple. Lo que Apple
+exige es que el precio, la duración y el título aparezcan **en la pantalla de
+compra** antes de pagar; de eso se encarga el paywall vía RevenueCat.
 
-Y borra los bloques `<div class="todo">` de cada página.
+De referencia, los precios previstos son 4,49 €/mes y 44,90 €/año — el anual
+equivale a dos meses gratis, y eso sí se menciona en el documento porque no
+depende de la moneda.
 
-> Los precios de `terms.html` tienen que coincidir exactamente con los de las
-> tiendas. Una discrepancia ahí es motivo de rechazo en la revisión de Apple.
+**El editor se identifica sin domicilio.** El RGPD (art. 13) pide la identidad
+del responsable y unos datos de contacto; un correo operativo cumple. El
+domicilio del editor es particular, y las tiendas piden la dirección por su
+cuenta cuando la necesitan.
 
-El `<meta name="robots" content="noindex">` de las cuatro páginas **se queda**.
-Es una decisión, no un resto del borrador: no queremos estas páginas en los
-resultados de búsqueda, y se llega a ellas desde los enlaces de la app.
+**El `noindex` se queda.** El `<meta name="robots" content="noindex">` de las
+cuatro páginas es una decisión, no un resto del borrador: no queremos estas
+páginas en los resultados de búsqueda, y se llega a ellas desde los enlaces de
+la app.
 
 No bloquea ningún trámite. `noindex` solo afecta a la indexación, no a la
 descarga: Play Console, AdMob y App Store Connect leen la página igual. Lo que
