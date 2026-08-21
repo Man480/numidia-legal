@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- BORRADOR: impide que los buscadores indexen la página mientras queden
-     marcadores sin rellenar. QUITAR esta línea antes de enviar las URLs a
-     Play Console, App Store Connect o AdMob. -->
+<!-- Decisión deliberada y permanente: estas páginas no se indexan en
+     buscadores. Se llega a ellas desde los enlaces de la app.
+
+     No quitar esta línea pensando que bloquea algún trámite: `noindex`
+     solo afecta a los resultados de búsqueda, no a la descarga. Play
+     Console, AdMob y App Store Connect leen la página con normalidad.
+
+     Por el mismo motivo, NO añadir un robots.txt con Disallow: eso sí
+     impediría la lectura, y podría dar la política por inaccesible. -->
 <meta name="robots" content="noindex">
 <title>Politique de confidentialité — Numidia</title>
 <link rel="stylesheet" href="./assets/style.css">
@@ -18,18 +24,11 @@
   <p class="updated">Application Numidia · Dernière mise à jour&nbsp;: <!--TODO--><strong>[DATE]</strong></p>
 </header>
 
-<div class="todo">
-  <strong>À compléter avant publication.</strong> Remplacez partout&nbsp;:
-  <code>[DATE]</code>, <code>[NOM DE L'ÉDITEUR]</code>, <code>[ADRESSE]</code>,
-  <code>[EMAIL DE CONTACT]</code>. Ce document décrit fidèlement ce que
-  l'application collecte réellement, mais il n'a pas été relu par un juriste.
-</div>
-
 <h2>1. Qui sommes-nous</h2>
 <p>
   L'application mobile <strong>Numidia</strong> est éditée par
-  <strong>[NOM DE L'ÉDITEUR]</strong>, dont le siège est situé
-  <strong>[ADRESSE]</strong>.
+  <strong>Majd Alhalah</strong>, dont le siège est situé
+  <strong>66 rue Jeanne Quemard, Angers France</strong>.
 </p>
 <p>
   Pour toute question relative à vos données, écrivez à
@@ -213,7 +212,7 @@
   <a href="./delete-account.html">Supprimer mon compte</a>
 </nav>
 
-<footer>Numidia — ⵏⵓⵎⵉⴷⵢⴰ</footer>
+<footer>Numidia</footer>
 
 </div>
 </body>

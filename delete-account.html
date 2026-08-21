@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- BORRADOR: impide que los buscadores indexen la página mientras queden
-     marcadores sin rellenar. QUITAR esta línea antes de enviar las URLs a
-     Play Console, App Store Connect o AdMob. -->
+<!-- Decisión deliberada y permanente: estas páginas no se indexan en
+     buscadores. Se llega a ellas desde los enlaces de la app.
+
+     No quitar esta línea pensando que bloquea algún trámite: `noindex`
+     solo afecta a los resultados de búsqueda, no a la descarga. Play
+     Console, AdMob y App Store Connect leen la página con normalidad.
+
+     Por el mismo motivo, NO añadir un robots.txt con Disallow: eso sí
+     impediría la lectura, y podría dar la política por inaccesible. -->
 <meta name="robots" content="noindex">
 <title>Supprimer votre compte — Numidia</title>
 <link rel="stylesheet" href="./assets/style.css">

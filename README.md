@@ -23,6 +23,14 @@ Y borra los bloques `<div class="todo">` de cada página.
 > Los precios de `terms.html` tienen que coincidir exactamente con los de las
 > tiendas. Una discrepancia ahí es motivo de rechazo en la revisión de Apple.
 
+El `<meta name="robots" content="noindex">` de las cuatro páginas **se queda**.
+Es una decisión, no un resto del borrador: no queremos estas páginas en los
+resultados de búsqueda, y se llega a ellas desde los enlaces de la app.
+
+No bloquea ningún trámite. `noindex` solo afecta a la indexación, no a la
+descarga: Play Console, AdMob y App Store Connect leen la página igual. Lo que
+sí la bloquearía es un `robots.txt` con `Disallow`, así que no lo añadas.
+
 ## Publicar
 
 **Vercel** (proyecto nuevo, distinto del panel):
